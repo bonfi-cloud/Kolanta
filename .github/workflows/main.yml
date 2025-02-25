@@ -1,5 +1,10 @@
 name: hello-world
-on: push
+
+on:
+  schedule:
+    - cron: "* * * * *" # Exécute toutes les minutes
+  push: # Vous pouvez garder cet événement si vous souhaitez également exécuter le workflow lors d'un push
+
 jobs:
   my-job:
     runs-on: ubuntu-latest
